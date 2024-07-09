@@ -82,8 +82,49 @@ body{background-image: url("https://img.freepik.com/premium-vector/book-logo-wit
 <link rel='stylesheet' id='crp-style-rounded-thumbs-css' href='https://oceansofgamess.com/wp-content/plugins/contextual-related-posts/css/rounded-thumbs.min.css?ver=3.5.2' type='text/css' media='all' />
 <style id='crp-style-rounded-thumbs-inline-css' type='text/css'>
 
-			.crp_related.crp-rounded-thumbs a {
-				width: 140px;
+{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .accordion {
+            width: 80%;
+            max-width: 1000px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            background: #fff;
+        }
+        .accordion-section {
+            flex: 1;
+            padding: 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            border-right: 1px solid #ccc;
+        }
+        .accordion-section:last-child {
+            border-right: none;
+        }
+        .accordion-section.active {
+            background: #f0f0f0;
+        }
+        .accordion-content {
+            display: none;
+            padding: 20px;
+        }
+        .accordion-content.active {
+            display: block;
+            flex: 1;
+        }
+      .crp_related.crp-rounded-thumbs a {
+	        width: 140px;
                 height: 140px;
 				text-decoration: none;
 			}
@@ -566,12 +607,45 @@ img { max-width:100%; height:auto;}		</style>
        <!----------------------About etc /main ---------------------------------------------->
 
        
-              <div class="nav nav-footer page-content">
-          <ul id="menu-nav-2" class="menu slide-up clear-block"><li id="menu-item-1003" class="menu-aboutus"><a href="">About Us</a></li>
-<li id="menu-item-1004" class="menu-contactus"><a href="">Contact Us</a></li>
-<li id="menu-item-1005" class="menu-disclaimer"><a href="">Disclaimer</a></li>
-<li id="menu-item-1006" class="menu-privacypolicy"><a href="">Privacy Policy</a></li>
-</ul>       </div>
+            <div class="accordion">
+        <div class="accordion-section" onclick="toggleAccordion(0)">
+            <h2>About Us</h2>
+        </div>
+        <div class="accordion-content" id="section1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur ante sit amet massa ultricies, vel iaculis lectus tempus.</p>
+        </div>
+        <div class="accordion-section" onclick="toggleAccordion(1)">
+            <h2>Our Mission</h2>
+        </div>
+        <div class="accordion-content" id="section2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur ante sit amet massa ultricies, vel iaculis lectus tempus.</p>
+        </div>
+        <div class="accordion-section" onclick="toggleAccordion(2)">
+            <h2>Our Team</h2>
+        </div>
+        <div class="accordion-content" id="section3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur ante sit amet massa ultricies, vel iaculis lectus tempus.</p>
+        </div>
+        <div class="accordion-section" onclick="toggleAccordion(3)">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="accordion-content" id="section4">
+            <p>Email: contact@company.com<br>Phone: 123-456-7890</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleAccordion(index) {
+            const contents = document.querySelectorAll('.accordion-content');
+            contents.forEach((content, i) => {
+                if (i === index) {
+                    content.classList.toggle('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        }
+    </script>
        
        <!-- footer -->
        <div class="shadow-left page-content">
