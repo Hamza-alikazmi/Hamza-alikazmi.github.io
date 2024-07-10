@@ -154,129 +154,13 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <li id="menu-item-8299" class="menu-rpg"><a href="">Flutter<span class="p"></span></a></li>
 <li id="menu-item-8305" class="menu-survival"><a href="">Books<span class="p"></span></a></li>
 <li id="menu-item-9408" class="menu-trainer"><a href="">Java<span class="p"></span></a></li>
-		                     <!-- </div>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-     <a class="navbar-brand" href="#">Navbar</a> 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-		</nav>
-			     
-           <!--- <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-         
-          </form>
-        </div>
-      </div>
-    </nav> -->
-      
+		                    
 		    
 
 </ul>         
 	  </div>
                  </div>
-<!--<nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li> -->
-           <!--- <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-      </div> --->
+
       <!-- /header -->
 
       
@@ -556,41 +440,98 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
       </div>
       <!-- /primary content -->
 <!--____________________________________________________Side Bar___________________________________________________________-->>
-      
+<div class="sidebar">
+  <div class="search">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+  </div>
+  <div class="ad">
+      <img src="ad1.jpg" alt="Advertisement">
+  </div>
+  <div class="ad">
+      <img src="ad2.jpg" alt="Advertisement">
+  </div>
+  <div class="subscribe">
+      <h3>Subscribe for Course Updates</h3>
+      <form action="subscribe.php" method="POST">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+      </form>
+  </div>
+  <div class="copyright">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+  </div>
+</div>
+<style>
+  .sidebar {
+      background-color: #f0f0f0;
+      padding: 20px;
+      width: 250px;
+      box-sizing: border-box;
+      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+  }
+  
+  .search input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+  }
+  
+  .search button {
+      width: 100%;
+      padding: 8px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+  }
+  
+  .ad {
+      margin-bottom: 20px;
+  }
+  
+  .ad img {
+      width: 100%;
+  }
+  
+  .subscribe {
+      margin-bottom: 20px;
+  }
+  
+  .subscribe h3 {
+      margin-bottom: 10px;
+  }
+  
+  .subscribe input[type="email"], .subscribe button {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+  }
+  
+  .subscribe button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+  }
+  
+  .subscribe button:hover {
+      background-color: #0056b3;
+  }
+  
+  .copyright {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+  }</style>
+<!--- SIDE BAR ENDS HERE  --->
 
-<!--- SIDE BAR STARTS HERE  --->
-	       
-  <div class="sidebar">
-        <div class="search">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
-        </div>
-        <div class="ad">
-            <img src="ad1.jpg" alt="Advertisement">
-        </div>
-        <div class="ad">
-            <img src="ad2.jpg" alt="Advertisement">
-        </div>
-        <div class="subscribe">
-            <h3>Subscribe for Course Updates</h3>
-            <form action="subscribe.php" method="POST">
-                <input type="email" name="email" placeholder="Your email address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
-        </div>
-    </div>
-	</div>
-	  
-  <li class="block"><div class="block-content block-text clear-block" id="instance-atom-text-11"><div class="title"><h3>Advertisement</h3><div class="bl"></div><div class="br"></div></div><div class="i"></div>
-    <div class="box textwidget advertisement"><script async data-cfasync="false" data-size="300x250" data-id="dl-banner-300x250" data-zone="7044984" src="//doruffleton.com/btag.min.js"></script></div>
-    </div></li><li class="block"><div class="block-content block-text clear-block" id="instance-atom-text-2"><div class="title"><h3>Copyright &copy;
-      learning Purposes Only</h3><div class="bl"></div><div class="br"></div></div><div class="i"></div>
-    <div class="box textwidget copyrightampdmcaprotected"><a class="copyrighted-badge" title="Copyrighted.com Protection Status" target="_blank" href=""><img alt="Copyrighted.com Registered &amp; Protected" border="0" width="150" height="40" src="https://static.copyrighted.com/badges/001.png" /></a><script src="https://static.copyrighted.com/badges/helper.js" type="text/javascript"></script>
-<a href="//www.dmca.com/Protection/Status.aspx?ID=81fecc9a-a9a7-460d-ac3f-7be208337507" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=7097d0fb-9720-4542-a0bb-b071eb004e7f" alt="DMCA.com Protection Status"></a> <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script></div>
-    </div></li>
+ 
 	    <!--- SIDE BAR ENDS HERE  --->
 
 <!-- /search form -->
@@ -621,7 +562,14 @@ main content
  -->
         
        <!----------------------About etc /main ---------------------------------------------->
-<!-- 
+
+       <!-- footer -->
+       <div class="shadow-left page-content">
+         <div class="shadow-right">
+
+           <div id="footer">
+
+
        
             <div class="accordion">
         <div class="accordion-section" onclick="toggleAccordion(0)">
@@ -650,15 +598,8 @@ main content
         </div>
     </div>
 
-    -->
-       
-       <!-- footer -->
-       <div class="shadow-left page-content">
-         <div class="shadow-right">
-
-           <div id="footer">
-
-             
+  
+                    
              <div id="copyright">
                               <script type="text/javascript" id="disqus_count-js-extra">
 /* <![CDATA[ */
