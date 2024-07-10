@@ -62,6 +62,7 @@ ul.jetpack-sharing-buttons__services-list.has-background {
   text-decoration: none;
 }
 body {
+  --wp--preset--color--black: #000000;
   --wp--preset--color--cyan-bluish-gray: #abb8c3;
   --wp--preset--color--white: #ffffff;
   --wp--preset--color--pale-pink: #f78da7;
@@ -491,7 +492,7 @@ img {
 
 .wrapper {
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: flex-en; /* Align items to the right */
 }
 
 .sidebar {
@@ -561,4 +562,3 @@ img {
   font-size: 12px;
   color: #888;
 }
-
