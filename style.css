@@ -444,6 +444,11 @@ body .is-layout-grid > * {
   background-color: purple;
 }
 
+button{
+	width: 3px
+	height: auto:
+}
+
 #site-title .headline {
   float: none;
   border: 0;
