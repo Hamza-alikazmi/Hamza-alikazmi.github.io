@@ -1,0 +1,127 @@
+<script>
+  // Activate hover functionality for accordion
+  document.querySelectorAll('.accordion-header button').forEach((button) => {
+    button.addEventListener('mouseenter', function () {
+      const targetId = this.getAttribute('data-bs-target');
+      const targetCollapse = document.querySelector(targetId);
+      const accordion = targetCollapse.closest('.accordion');
+
+      // Close all other items
+      accordion.querySelectorAll('.accordion-collapse').forEach((collapse) => {
+        if (
+          collapse !== targetCollapse &&
+          !collapse.classList.contains('show')
+        ) {
+          collapse.classList.add('hover-collapse');
+        }
+      });
+
+      // Open current item
+      targetCollapse.classList.remove('hover-collapse');
+    });
+
+    button.addEventListener('mouseleave', function () {
+      const targetId = this.getAttribute('data-bs-target');
+      const targetCollapse = document.querySelector(targetId);
+
+      // Reset all items
+      document.querySelectorAll('.accordion-collapse').forEach((collapse) => {
+        collapse.classList.remove('hover-collapse');
+      });
+    });
+  });
+</script>
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseAboutMe"
+        aria-expanded="false"
+        aria-controls="collapseAboutMe"
+      >
+        About Me
+      </button>
+    </h2>
+    <div
+      id="collapseAboutMe"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <img
+          width="140"
+          height="160"
+          src="https://drive.google.com/file/d/13VMdDtmzalb3uKQrfVHhGSoqmazVcpPc/view"
+        /><strong>Name: Syed Hamza ALi Shah</strong> 
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMyPartner"
+        aria-expanded="false"
+        aria-controls="collapseMyPartner"
+      >
+        My Partner
+      </button>
+    </h2>
+    <div
+      id="collapseMyPartner"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>Name: Muhammad Imran Khan</strong> 
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseContactUs"
+        aria-expanded="false"
+        aria-controls="collapseContactUs"
+      >
+        Contact Us
+      </button>
+    </h2>
+    <div
+      id="collapseContactUs"
+      class="accordion-collapse collapse"
+      data-bs-parent="#accordionExample"
+    >
+      <div class="accordion-body">
+        <strong>Syed Hamza ALi</strong> 
+        Email: 63kazmi.edu@gmail.com
+        <strong>Name: Muhammad Imran Khan</strong> 
+        Phone no :03461576057
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Additional styling for hover effect */
+  .accordion-item {
+    position: relative;
+  }
+
+  .accordion-collapse.hover-collapse {
+    display: none !important; /* Hide the collapse content */
+  }
+
+  .accordion-item:hover .accordion-collapse {
+    display: block !important; /* Display the collapse content on hover */
+  }
+</style>
