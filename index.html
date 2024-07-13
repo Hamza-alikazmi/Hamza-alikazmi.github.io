@@ -738,7 +738,67 @@ jQuery(document).ready(function() {
 </div>
     </div></div>
 
+<div class="header">
+    <h1>Search Bar Example</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button type="button" onclick="search()">Search</button>
+        <button type="button" onclick="clearPage()">Clear</button> <!-- Button to clear page -->
+    </div>
+</div>
 
+<div class="content">
+    <h2>Search Results</h2>
+    <div id="searchResults">
+        <!-- Search results will be displayed here -->
+    </div>
+</div>
+
+<div id="main" class="page-content">
+    <div id="main-ext" class="clear-block">
+        <!-- Your existing content here -->
+        <!-- Example posts for demonstration -->
+        <div class="posts clear-block">
+            <!-- Replace with your actual post HTML structure -->
+            
+
+<script src="script.js"></script>
+<script>
+    // JavaScript code for search functionality and page clearing
+
+    function search() {
+        var input = document.getElementById('searchInput').value.toLowerCase();
+        var posts = document.getElementsByClassName('post'); // Adjust the class name as per your HTML structure
+        var searchResults = document.getElementById('searchResults');
+        
+        // Clear previous search results
+        searchResults.innerHTML = '';
+        
+        // Loop through all posts
+        Array.from(posts).forEach(function(post) {
+            var title = post.querySelector('.title a').innerText.toLowerCase();
+            var content = post.querySelector('.post-content').innerText.toLowerCase();
+            
+            // Check if the title or content contains the search input
+            if (title.includes(input) || content.includes(input)) {
+                // Clone the post and append it to searchResults
+                var clonedPost = post.cloneNode(true);
+                searchResults.appendChild(clonedPost);
+            }
+        });
+        
+        // Clear search input field
+        document.getElementById('searchInput').value = '';
+    }
+
+    function clearPage() {
+        // Clear search input field
+        document.getElementById('searchInput').value = '';
+        
+        // Clear search results
+        document.getElementById('searchResults').innerHTML = '';
+    }
+</script>
       <!---------------------------------- main-------------------------------------------------->
       <div id="main" class="page-content">
         <div id="main-ext" class="clear-block">
