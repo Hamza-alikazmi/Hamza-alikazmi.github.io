@@ -153,15 +153,105 @@ jQuery(document).ready(function() {
 </div>
 </div>
     </div></div>
+    <div class="header" >
+        
+        <div class="search-container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <h1>Search Any Course</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseAboutMe"
+                    aria-expanded="false"
+                    aria-controls="collapseAboutMe"
+                  >
+                    About Me
+                  </button>
+                </h2>
+                <div
+                  id="collapseAboutMe"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                  <img
+                      width="140"
+                      height="160"
+                      src="Hamza.jpg"
+                    /><p><strong>Name: Syed Hamza ALi Shah</strong> </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseMyPartner"
+                    aria-expanded="false"
+                    aria-controls="collapseMyPartner"
+                  >
+                    My Partner
+                  </button>
+                </h2>
+                <div
+                  id="collapseMyPartner"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                      <div style="display:block"> <img
+                      width="140"
+                      height="160"
+                      src="imran.jpeg"
+                    /></div>
+                    <p></p><strong>Name: Muhammad Imran Khan</strong> </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseContactUs"
+                    aria-expanded="false"
+                    aria-controls="collapseContactUs"
+                  >
+                    Contact Us
+                  </button>
+                </h2>
+                <div
+                  id="collapseContactUs"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>Syed Hamza ALi</strong> 
+                    <p>Email: 63kazmi.edu@gmail.com</p>
+                   <p> <strong>Name: Muhammad Imran Khan</strong> </p>
+                    Phone no :03461576057
+                  </div>
+                </div>
+              </div>
+            </div>
+      </nav>
 
-<div class="header" >
-    <h1>Search Any Course</h1>
-    <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search...">
         <button type="button" onclick="search()">Search</button>
         <button type="button" onclick="clearPage()">Clear</button> <!-- Button to clear page -->
-    </div>
-</div>
+        
 
 <div class="content">
     <h2>Search Results</h2>
@@ -447,7 +537,7 @@ By participating along with us in the workshop, you’ll learn Learn the basics 
             <div class="post-info">
 
         
-                in <a href="" rel="tag" title="Trading topics">Earning</a>, <a href="" rel="tag" title="Earning topics)">Trading</a>        
+                in <a href="" rel="tag" title="Trading topics">Earning</a>, <a href="" rel="tag" title="Earning topics">Trading</a>        
         
       </div>
     </div>
@@ -654,91 +744,9 @@ By participating along with us in the workshop, you’ll learn Learn the basics 
 	
       <div class="wrapper" >
         <!-- 1st sidebar -->
-<div id="sidebar">
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseAboutMe"
-              aria-expanded="false"
-              aria-controls="collapseAboutMe"
-            >
-              About Me
-            </button>
-          </h2>
-          <div
-            id="collapseAboutMe"
-            class="accordion-collapse collapse"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-            <img
-                width="140"
-                height="160"
-                src="Hamza.jpg"
-              /><p><strong>Name: Syed Hamza ALi Shah</strong> </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseMyPartner"
-              aria-expanded="false"
-              aria-controls="collapseMyPartner"
-            >
-              My Partner
-            </button>
-          </h2>
-          <div
-            id="collapseMyPartner"
-            class="accordion-collapse collapse"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-                <div style="display:block"> <img
-                width="140"
-                height="160"
-                src="imran.jpeg"
-              /></div>
-              <p></p><strong>Name: Muhammad Imran Khan</strong> </p>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseContactUs"
-              aria-expanded="false"
-              aria-controls="collapseContactUs"
-            >
-              Contact Us
-            </button>
-          </h2>
-          <div
-            id="collapseContactUs"
-            class="accordion-collapse collapse"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              <strong>Syed Hamza ALi</strong> 
-              <p>Email: 63kazmi.edu@gmail.com</p>
-             <p> <strong>Name: Muhammad Imran Khan</strong> </p>
-              Phone no :03461576057
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
+
+    
+ 
 <!-- /1st sidebar -->
 <!-- /search form -->
   <!---/Side bar --->
