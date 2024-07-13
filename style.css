@@ -17,7 +17,6 @@ body {
 .search-container {
     margin-top: 20px;
     text-align: center;
-    justify-content:center;
 }
 
 input[type=text] {
@@ -460,35 +459,44 @@ align-items: center;
 height: 100vh;
 }
 .accordion {
-width: 80%;
-max-width: 1000px;
-display: flex;
-overflow: hidden;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-border-radius: 5px;
-background: #fff;
-}
-.accordion-section {
-flex: 1;
-padding: 20px;
-cursor: pointer;
-transition: background 0.3s ease;
-border-right: 1px solid #ccc;
-}
-.accordion-section:last-child {
-border-right: none;
-}
-.accordion-section.active {
-background: #f0f0f0;
-}
-.accordion-content {
-display: none;
-padding: 20px;
-}
-.accordion-content.active {
-display: block;
-flex: 1;
-}
+    padding-left: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ccc; /* Optional: Add border between accordion items */
+  }
+  
+  .accordion-header {
+    border: none;
+    background: none;
+    text-align: left;
+    padding: 3px 2px;
+  }
+  
+  .accordion-button {
+    text-align: left;
+    padding: 1px 2px;
+    width: 100%; /* Ensure button takes full width of container */
+  }
+  
+  .accordion-collapse {
+    padding: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  
+  .accordion-body {
+    padding: 2px;
+  }
+  
+  /* Optional: Adjust image size within accordion */
+  .accordion-body img {
+    width: 140px;
+    height: 160px;
+  }
 .crp_related.crp-rounded-thumbs a {
 width: 140px;
 height: 140px;
@@ -566,6 +574,9 @@ background-color: #f0f0f0;
 padding: 20px;
 width: auto;
 box-sizing: border-box;
+display:flex;
+justify-content: right;
+text-align: right;
 position: fixed;
 height: 100%;
 overflow-y: auto;
