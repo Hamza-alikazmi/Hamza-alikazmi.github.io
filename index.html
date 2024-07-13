@@ -515,13 +515,13 @@ img {
 
 .wrapper {
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: flex-start; /* Align items to the right */
 }
 
 .sidebar {
   background-color: #f0f0f0;
   padding: 20px;
-  width: 250px;
+  width: auto;
   box-sizing: border-box;
   position: fixed;
   height: 100%;
@@ -649,19 +649,19 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <script type="text/javascript" src="https://oceansofgamess.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
 <script type="text/javascript" src="https://oceansofgamess.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 <script type="text/javascript" id="jquery-js-after">
-// /* <![CDATA[ */
-// jQuery(document).ready(function() {
-// 	jQuery(".d4c6906c9d721da8ea7c6972ff67f5e0").click(function() {
-// 		jQuery.post(
-// 			"https://oceansofgamess.com/wp-admin/admin-ajax.php", {
-// 				"action": "quick_adsense_onpost_ad_click",
-// 				"quick_adsense_onpost_ad_index": jQuery(this).attr("data-index"),
-// 				"quick_adsense_nonce": "dd857c315a",
-// 			}, function(response) { }
-// 		);
-// 	});
-// });
-// /* ]]> */
+/* <![CDATA[ */
+jQuery(document).ready(function() {
+	jQuery(".d4c6906c9d721da8ea7c6972ff67f5e0").click(function() {
+		jQuery.post(
+ 			"https://oceansofgamess.com/wp-admin/admin-ajax.php", {
+ 				"action": "quick_adsense_onpost_ad_click",
+ 				"quick_adsense_onpost_ad_index": jQuery(this).attr("data-index"),
+ 				"quick_adsense_nonce": "dd857c315a",
+ 			}, function(response) { }
+ 		);
+ 	});
+ });
+ /* ]]> */
 </script>
 <script type="text/javascript" src="https://oceansofgamess.com/wp-content/plugins/ads-disabler-disqus-main/assets/js/frontend.js?ver=1.0.0" id="Disable_Disqus_Ads-frontend-js"></script>
 <script type="text/javascript" src="https://oceansofgamess.com/wp-content/plugins/remove-disqus-ads/assets/js/frontend.js?ver=1.0.0" id="remove_disqus_ads-frontend-js"></script>
@@ -732,14 +732,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <li id="menu-item-8299" class="menu-rpg"><a href="">Flutter<span class="p"></span></a></li>
 <li id="menu-item-8305" class="menu-survival"><a href="">Books<span class="p"></span></a></li>
 <li id="menu-item-9408" class="menu-trainer"><a href="">Java<span class="p"></span></a></li>
-
-    <li> <input type="text" placeholder="Search..." >
-    </li>
-    <li><button>Search</button></li>
-  
-  
-
-
   
 </ul>  
     <div class="container">
@@ -1022,8 +1014,22 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 
 
       <!---Side Bar -->
+
+	
       <div class="wrapper" >
-        <ul>
+        <ul class="navbar nav">
+	<div class="block-content block-search clear-block" id="instance-atom-search-2">
+<!-- search form -->
+<div class="search-form" role="search">s
+  <form method="get" class="search-form clear-block" action="https://skillspectrumpk.vercel.app">
+    <input type="submit" class="submit" title="Search Website" value="">
+    <fieldset>
+      <input type="text" name="s" data-default="Search Website" class="text alignleft clearField suggestTerms" value="">
+      <input type="hidden" value="submit">
+    </fieldset>
+ </form>
+</div>
+<!-- /search form -->
         <li><div class="ad">
             <img src="ad1.jpg" alt="Advertisement 1">
         </div></li>
