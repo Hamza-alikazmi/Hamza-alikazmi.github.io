@@ -15,7 +15,7 @@ body {
 
 /* Style the header */
 header {
-    background: linear-gradient(135deg, #ff6f61, #de9dff); /* Gradient from coral to lavender */
+    background: transparent; /* Gradient from coral to lavender */
     color: #fff;
     padding: 1rem 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
