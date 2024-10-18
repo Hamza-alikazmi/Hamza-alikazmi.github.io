@@ -1,93 +1,437 @@
-/* Reset some default browser styles */
-body, h1, p, ul {
+/* Basic Styling for the Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #CDC1FF;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+#darkModeToggle {
+    position: absolute;
+    right: 8%; /* Position button on the right */
+    top: 20px; /* Adjust vertical position */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* General header styling */
+.header {
+    z-index: 1;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Flexbox for header content */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+/* Logo styling */
+
+#logo {
+    border-radius: 50%;
+    padding-left: 2%; /* Keep or adjust as needed */
+    padding-top: 0; /* Changed from -1% to 0 */
+    display: block; /* Change to block if it's just a single logo */
+    background-color: transparent;
+    max-height: 100px; /* Use a fixed size for better control */
+    max-width: 200px; /* Use a fixed size for better control */
+    overflow: hidden; /* Prevents any overflow */
+    /* margin: auto; Centers the logo if it's a block element */
+}
+
+
+/* Moto text styling */
+.header-text {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-left: 1rem;
+    color: aqua;
+    display: flex;
+}
+
+/* SVG Icon Styles */
+svg {
+    width: 24px;
+    height: 24px;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+svg:hover {
+    border-radius: 35%;
+    border: 2px solid #2588eb;
+}
+
+/* Canvas Styling */
+#bouncingBallsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/*####################################################### Navigation Bar Styles ####################################################*/
+/* Navigation Bar Styles */
+.nav-main {
+    background-color: #343a40;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Prevent content from overflowing */
     box-sizing: border-box;
 }
 
-/* Set basic styles for the body */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f8ff; /* AliceBlue background */
-    color: #333;
-}
-
-/* Style the header */
-header {
-    background: transparent; /* Gradient from coral to lavender */
-    color: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-header nav ul {
-    list-style: none;
-    text-align: center;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #ffd700; /* Gold on hover */
-}
-
-/* Style the main content area */
-main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Style the footer */
-footer {
-    background: linear-gradient(135deg, #00bcd4, #ffeb3b); /* Gradient from cyan to yellow */
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
+.nav-main ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    justify-content: center;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer p {
-    margin: 0.5rem 0;
+.nav-main ul li {
+    margin: 0 10px; /* Reduced margin for better fit */
 }
 
-footer a {
-    color: #fff;
+.nav-main ul li a {
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 8px 10px; /* Reduced padding to fit more content */
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+    font-weight: 500;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
-footer a:hover {
-    color: #ff5722; /* Deep orange on hover */
+.nav-main ul li a:hover {
+    background-color: #495057;
+    color: #f8f9fa;
 }
 
-.logo{
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-
+.nav-main ul li.active a {
+    background-color: #17a2b8;
+    color: #ffffff;
 }
-.logo-container{
+
+/* Fancy hover effect for the span in links */
+.nav-main ul li a .p {
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: #17a2b8;
+    transition: width 0.3s ease;
+    margin-top: 5px;
+}
+
+.nav-main ul li a:hover .p {
+    width: 100%;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+.nav-main.mobile ul {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.nav-main.mobile ul.show {
+    display: flex;
+}
+
+.nav-main.mobile ul li {
+    margin: 10px 0;
+}
+
+/* Shadow effect on the whole page content */
+.primary-content {
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
     text-align: center;
-    
-
+    margin: auto;
 }
+
+
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+.nav-main.mobile ul {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.nav-main.mobile ul.show {
+    display: flex;
+}
+
+.nav-main.mobile ul li {
+    margin: 10px 0;
+}
+
+.page-content {
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: #31b2ee;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+/* Input and Buttons */
+input[type="text"] {
+    padding: 10px 15px;
+    border: 2px solid #7a6bff;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #2588eb;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7a6bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #5f52d8;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Search Box */
+.search-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Results */
+#searchResults {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Posts */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    position: relative;
+}
+
+footer {
+    display: flex; /* Use Flexbox to align items */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+    padding: 1rem; /* Add some padding for spacing */
+    background-color: #343a40; /* Set a background color for the footer */
+    color: #ffffff; /* Set text color */
+}
+
+footer .text-center {
+    flex: 1; /* Allow this element to take up available space */
+    text-align: center; /* Center text within this element */
+}
+
+footer .d-flex {
+    flex: 2; /* Allow this element to take up more space */
+    display: flex; /* Use Flexbox for inner items */
+    justify-content: flex-start; /* Align items to the left */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+
+.post {
+    /* Changed from fixed to relative to maintain document flow */
+    position: relative;
+    /* Ensure each post has a consistent height */
+    height: 400px;
+}
+
+
+.title{
+    font-size: x-large;
+    font-weight: 100Px;
+    max-height: 9%;
+    overflow: hidden;
+}
+.title:hover {
+    font-size: 2rem; /* Adjust the size as per your design */
+    max-height: fit-content;
+    background: rgb(114, 182, 245); /* Valid color */
+    overflow: visible; /* You may want to use 'hidden' to hide overflowing content */
+}
+
+/* Post Details */
+.post-details {
+    background: rgb(114, 182, 245);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Ensuring the content doesn't overflow */
+    overflow: hidden;
+    height: 100%; /* Ensuring it fills the post container */
+}
+
+.post-details:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.post-thumb img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* .nav-main ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-main ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-main ul li a {
+        padding: 10px 15px;
+        text-align: center;
+        width: 100%;
+    }
+} */}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+body.dark-mode svg {
+    color: white;
+}
+
+body.dark-mode .nav-main {
+    background-color: #282c34;
+}
+
+body.dark-mode .nav-main ul li a {
+    color: #f8f9fa;
+}
+
+body.dark-mode .nav-main ul li a:hover {
+    background-color: #3a3f47;
+}
+
+body.dark-mode .nav-main ul li.active a {
+    background-color: #61dafb;
+    color: #282c34;
+}
+
+/* Mobile Styles for Header */
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-logo {
+        margin-bottom: 10px;
+    }
+}
+
