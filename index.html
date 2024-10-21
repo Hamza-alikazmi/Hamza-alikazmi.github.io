@@ -83,9 +83,26 @@
     </div>
 
     <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search..." onkeypress="if(event.key === 'Enter') searchFunction(event)">
+        <input type="text" id="filter-input" placeholder="Search..." ">
         <button type="button" onclick="searchFunction(event)">Search</button> <!-- Trigger search on button click -->
     </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#filter-input").on("keyup", function() {
+                var filterText = $(this).val().toLowerCase();
+                $(".posts .post").each(function() {
+                    var postContent = $(this).text().toLowerCase();
+                    if (postContent.indexOf(filterText) > -1) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
+
 
     <!-- Example posts to search through -->
     <div id="primary-content">
