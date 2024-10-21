@@ -71,7 +71,9 @@ svg:hover {
     border-radius: 35%;
     border: 2px solid #2588eb;
 }
-
+svg:active {
+    background-color:transparent;
+}
 /* Canvas Styling */
 #bouncingBallsCanvas {
     position: absolute;
