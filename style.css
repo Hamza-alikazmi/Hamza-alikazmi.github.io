@@ -70,6 +70,7 @@ svg {
 svg:hover {
     border-radius: 35%;
     border: 2px solid #2588eb;
+    background-color:transparent;
 }
 svg:active {
     background-color:transparent;
@@ -282,14 +283,6 @@ button:active {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Search Results */
-#searchResults {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
 /*h2 {
     font-size: 1.5em;
@@ -333,6 +326,7 @@ footer .d-flex {
     /* Ensure each post has a consistent height */
     height: 300px;
     overflow:hidden;
+    margin:2px;
 }
 
 
@@ -359,6 +353,7 @@ footer .d-flex {
     /* Ensuring the content doesn't overflow */
     overflow: hidden;
     height: 100%; /* Ensuring it fills the post container */
+    margin:2px;
 }
 
 .post-details:hover {
