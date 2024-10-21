@@ -291,11 +291,11 @@ button:active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+/*h2 {
     font-size: 1.5em;
     color: #333;
     margin-bottom: 10px;
-}
+}*/
 
 /* Posts */
 .posts {
@@ -338,7 +338,6 @@ footer .d-flex {
 .title{
     font-size: x-large;
     font-weight: 100Px;
-    max-height: 9%;
     overflow: hidden;
 }
 .title:hover {
