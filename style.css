@@ -331,7 +331,8 @@ footer .d-flex {
     /* Changed from fixed to relative to maintain document flow */
     position: relative;
     /* Ensure each post has a consistent height */
-    height: 400px;
+    height: 300px;
+    overflow:hidden;
 }
 
 
