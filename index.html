@@ -25,6 +25,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="script.js" defer></script>
+
+    <style>
+
+    </style>
 </head>
 <body>
     <div id="page">
@@ -60,30 +64,52 @@
                             <a href="https://unis-green.vercel.app" aria-current="Home">Home<span class="p"></span></a>
                         </li>
                         <li class="Python"><a href="#">Python<span class="p"></span></a></li>
-                        <li class="HTML"><a href="#">HTML<span class="p"></span></a></li>
-                        <li class="CSS"><a href="#">CSS<span class="p"></span></a></li>
-                        <li class="JavaScript"><a href="#">JavaScript<span class="p"></span></a></li>
-                        <li class="SQL"><a href="#">SQL<span class="p"></span></a></li>
+                       <li class="Web Development"><a href="#">Web Development<span class="p"></span></a></li>
+                        <!-- <li class="CSS"><a href="#">CSS<span class="p"></span></a></li> -->
+                        <!-- <li class="JavaScript"><a href="#">JavaScript<span class="p"></span></a></li> -->
+                        <li class="Programming"><a href="#">Programming<span class="p"></span></a></li>
                         <li class="Canva"><a href="#">Canva<span class="p"></span></a></li>
                         <li class="Ethical Hacking"><a href="#">Ethical Hacking<span class="p"></span></a></li>
-                        <li class="PhotoShop"><a href="#">PhotoShop<span class="p"></span></a></li>
-                        <li class="Illustrator"><a href="#">Illustrator<span class="p"></span></a></li>
-                        <li class="Node.js"><a href="#">Node.js<span class="p"></span></a></li>
+                        <!-- <li class="PhotoShop"><a href="#">PhotoShop<span class="p"></span></a></li> -->
+                        <!-- <li class="Illustrator"><a href="#">Illustrator<span class="p"></span></a></li> -->
+                        <!-- <li class="Node.js"><a href="#">Node.js<span class="p"></span></a></li>
                         <li class="React"><a href="#">React<span class="p"></span></a></li>
                         <li class="React Native"><a href="#">React Native<span class="p"></span></a></li>
                         <li class="Xamarin Form"><a href="#">Xamarin Form<span class="p"></span></a></li>
                         <li class="Java"><a href="#">Java<span class="p"></span></a></li>
                         <li class="Flask"><a href="#">Flask<span class="p"></span></a></li>
                         <li class="Flutter"><a href="#">Flutter<span class="p"></span></a></li>
-                        <li class="Books"><a href="#">Books<span class="p"></span></a></li>
+                        <li class="Books"><a href="#">Books<span class="p"></span></a></li> -->
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
 
-    <div class="search-box">
-        <input type="text" id="filter-input" placeholder="Search..." ">
+    <Script>$(document).ready(function() {
+        // Add click event to each navbar link
+        $('#menu-menu li').on('click', function() {
+            // Get the text of the clicked link (i.e., the category name)
+            var category = $(this).text().trim();
+    
+            // Loop through each post
+            $('.posts .post').each(function() {
+                // Check if the post contains the selected category in the post-info section
+                var postTags = $(this).find('.post-info').text();
+                
+                // Show the post if it contains the category, else hide it
+                if (postTags.includes(category)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+    });
+    </Script>
+
+    <div class="search-box" style="display:flex;justify-content: center;">
+        <input type="text" id="filter-input" placeholder="Search..." >
         <button type="button" onclick="searchFunction(event)">Search</button> <!-- Trigger search on button click -->
     </div>
 
@@ -158,7 +184,7 @@
         <div class="post-std clear-block">
             <div class="post-info">
                 in <a href="" rel="tag" title="Development">Development</a>, 
-                <a href="" rel="tag" title="Programming Languages">Programming Languages</a>
+                <a href="" rel="tag" title="Programming Languages">Programming Languages</a>,
             </div>
         </div>
     </div>
@@ -179,7 +205,7 @@
         </h2>
         <div class="post-std clear-block">
             <div class="post-info">
-                in <a href="" rel="tag" title="Development">Development</a>
+                in <a href="" rel="tag" title="Development">Ethical Hacking</a>
             </div>
         </div>
     </div>
@@ -198,7 +224,8 @@
         <div class="post-std clear-block">
             <div class="post-info">
                 in <a href="" rel="tag" title="Development">Development</a>, 
-                <a href="" rel="tag" title="Programming">Programming</a>
+                <a href="" rel="tag" title="Programming">Programming</a>,
+                <a href="" rel="tag" title="Programming">Android APP</a>,
             </div>
         </div>
     </div>
@@ -259,6 +286,114 @@
     </div>
 </div>
 <!-- /Post -->
+
+<div class="post">
+    <div class="post-details">
+        <a class="post-thumb" id="thumb-48430" href="https://drive.google.com/drive/folders/1mZwaNmPJB6OcGf-lSejIvbU8y2YxjDt4" title="Complete Ethical Hacking Masterclass Go from Zero to Hero">
+            <img width="140" height="160" src="https://img-c.udemycdn.com/course/750x422/5195428_dc75_10.jpg" alt="Introduction to Kotlin and Android Development" decoding="async">
+        </a>
+        <h2 class="title">
+            <a href="https://drive.google.com/drive/folders/1mZwaNmPJB6OcGf-lSejIvbU8y2YxjDt4" rel="bookmark" title="Permanent Link: Complete Ethical Hacking Masterclass Go from Zero to Hero">Complete Ethical Hacking Masterclass Go from Zero to Hero</a>
+        </h2>
+        <div class="post-std clear-block">
+            <div class="post-info">
+                in <a href="" rel="tag" title="Ethical Hacking">Ethical Hacking</a>,
+                in <a href="" rel="tag" title="CyberSecurity">CyberSecurity</a> 
+              </div>
+        </div>
+    </div>
+</div>
+<!-- Post 4 -->
+ <!-- /Post -->
+
+<div class="post">
+    <div class="post-details">
+        <a class="post-thumb" id="thumb-48430" href="https://drive.google.com/drive/folders/1N46EbkVGpS2PS2Msl3owOmgWRVoZ973m" title="Complete Cybersecurity Bootcamp: Zero to Mastery">
+            <img width="140" height="160" src="https://images.ctfassets.net/aq13lwl6616q/1nSOi4H0zAGJOhK1VTKWDK/09cbe2160152366ce3f0edfc97e96010/Cybersecurity_-_Academy_Thumbnail_2.png?w=500&fm=webp" alt="Complete Cybersecurity Bootcamp: Zero to Mastery" decoding="async">
+        </a>
+        <h2 class="title">
+            <a href="https://drive.google.com/drive/folders/1N46EbkVGpS2PS2Msl3owOmgWRVoZ973m" rel="bookmark" title="Permanent Link: Complete Cybersecurity Bootcamp: Zero to Mastery">Complete Cybersecurity Bootcamp: Zero to Mastery</a>
+        </h2>
+        <div class="post-std clear-block">
+            <div class="post-info">
+                in 
+                <a href="" rel="tag" title="CyberSecuirty">CyberSecuirty</a>,
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Post 4 --><!-- /Post -->
+
+<div class="post">
+    <div class="post-details">
+        <a class="post-thumb" id="thumb-48430" href=" https://drive.google.com/drive/folders/18cHDDVwv3JGxkksUOTVGxVQdahnbgROk
+" title="Introduction to Kotlin and Android Development">
+            <img width="140" height="160" src="https://img-c.udemycdn.com/course/750x422/6029000_b5a3_2.jpg" alt="Theoretical Foundation of AI in Cybersecurity" decoding="async">
+        </a>
+        <h2 class="title">
+            <a href=" https://drive.google.com/drive/folders/18cHDDVwv3JGxkksUOTVGxVQdahnbgROk
+" rel="bookmark" title="Permanent Link: Theoretical Foundation of AI in Cybersecurity">Theoretical Foundation of AI in Cybersecurity</a>
+        </h2>
+        <div class="post-std clear-block">
+            <div class="post-info">
+                in <a href="" rel="tag" title="Development">Development</a>, 
+                <a href="" rel="tag" title="Programming">Programming</a>,
+                <a href="" rel="tag" title="Programming">AI</a>,
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Post 4 --><!-- /Post -->
+
+<div class="post">
+    <div class="post-details">
+        <a class="post-thumb" id="thumb-48430" href="https://drive.google.com/drive/folders/1ck1qg7zXiu1-Jhc5N29ycQz0Ktglsios?usp=drive_link" title="Introduction to Kotlin and Android Development">
+            <img width="140" height="260"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeVK1lo2o78AIYC6cD7NydcyA6keR5aZHyvwrpreH6yV8S5ZOFCbcasNuNunt1vUFYnB8&usqp=CAU" alt="CEH V12 Latest Complete Course" decoding="async">
+        </a>
+        <h2 class="title">
+            <a href="https://drive.google.com/drive/folders/1ck1qg7zXiu1-Jhc5N29ycQz0Ktglsios?usp=drive_link" rel="bookmark" title="Permanent Link: CEH V12 Latest Complete Course">CEH V12 Latest Complete Course</a>
+        </h2>
+        <div class="post-std clear-block">
+            <div class="post-info">
+                in <a href="" rel="tag" title="Ethical Hacking">Ethical Hacking</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Post 4 --><!-- /Post -->
+
+<div class="post">
+    <div class="post-details">
+        <a class="post-thumb" id="thumb-48430" href="https://mega.nz/folder/WIo2wA6T#uGvEAZc4XmWhPAHgSJPpTA" title="SDR for Ethical Hackers and Security Researchers 5.0">
+            <img width="140" height="160" src="https://securetechware.com/wp-content/uploads/2022/08/banner_v5.jpg" alt="SDR for Ethical Hackers and Security Researchers 5.0" decoding="async">
+        </a>
+        <h2 class="title">
+            <a href="https://mega.nz/folder/WIo2wA6T#uGvEAZc4XmWhPAHgSJPpTA" rel="bookmark" title="Permanent Link: SDR for Ethical Hackers and Security Researchers 5.0">SDR for Ethical Hackers and Security Researchers 5.0</a>
+        </h2>
+        <div class="post-std clear-block">
+            <div class="post-info">
+                in <a href="" rel="tag" title="Ethical Hacking">Ethical Hacking</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Post 4 --><!-- /Post -->
+
+<!-- <div class="post">
+    <div class="post-details">
+        <a class="post-thumb" id="thumb-48430" href="https://drive.google.com/drive/folders/1ck1qg7zXiu1-Jhc5N29ycQz0Ktglsios?usp=drive_link" title="Introduction to Kotlin and Android Development">
+            <img width="140" height="160" src="https://securetechware.com/wp-content/uploads/2022/08/banner_v5.jpg" alt="Introduction to Kotlin and Android Development" decoding="async">
+        </a>
+        <h2 class="title">
+            <a href="https://drive.google.com/drive/folders/1ck1qg7zXiu1-Jhc5N29ycQz0Ktglsios?usp=drive_link" rel="bookmark" title="Permanent Link: Introduction to Kotlin and Android Development">Introduction to Kotlin and Android Development</a>
+        </h2>
+        <div class="post-std clear-block">
+            <div class="post-info">
+                in <a href="" rel="tag" title="Development">Ethical Hacking</a>
+            </div>
+        </div>
+    </div>
+</div> -->
 <!-- Post 4 -->
 <div class="post">
     <div class="post-details">
